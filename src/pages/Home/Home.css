@@ -1,0 +1,89 @@
+.home_content {
+  padding: 4% 8%;
+}
+@media only screen and (min-width: 1400px) {
+  .home_content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.home_content .home_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home_content .home_header .home_buttons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.home_content .home_header .home_buttons button {
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.home_content .info {
+  max-width: 600px;
+  margin: 1.2rem 0;
+}
+.home_content .info ul {
+  line-height: 1.5;
+  padding: 0.5rem 1.2rem;
+}
+.home_content .home_body {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.home_content .home_body .input_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+.home_content .home_body .input_group .input_label {
+  font-weight: bold;
+}
+.home_content .home_body .input_group input {
+  font-weight: 600;
+  margin: 0.4rem 0;
+}
+.home_content .home_body .input_group textarea {
+  resize: none;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 8px;
+}
+.home_content .home_body .input_group .input_button button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.home_content .home_footer {
+  display: flex;
+  justify-content: space-between;
+}
+.home_content .home_footer a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.8rem;
+  padding: 12% 5%;
+}
+.home_content .home_footer a .icon:hover {
+  transition: 0.3s;
+  color: grey;
+  transform: translateY(-5px);
+}/*# sourceMappingURL=Home.css.map */

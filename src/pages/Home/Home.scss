@@ -1,0 +1,104 @@
+@mixin FlexProp {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin buttonStyle {
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.home_content {
+  padding: 4% 8%;
+
+  @media only screen and (min-width: 1400px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .home_header {
+    @include FlexProp();
+    align-items: center;
+
+    .home_buttons {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.2rem;
+
+      button {
+        @include buttonStyle();
+      }
+    }
+  }
+
+  .info {
+    max-width: 600px;
+    margin: 1.2rem 0;
+
+    ul {
+      line-height: 1.5;
+      padding: 0.5rem 1.2rem;
+    }
+  }
+
+  .home_body {
+    @include FlexProp();
+    gap: 3rem;
+
+    .input_group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+
+      .input_label {
+        font-weight: bold;
+      }
+
+      input {
+        font-weight: 600;
+        margin: 0.4rem 0;
+      }
+
+      textarea {
+        resize: none;
+        padding: 0.5rem;
+        outline: none;
+        border-radius: 8px;
+      }
+
+      .input_button {
+        button {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          @include buttonStyle();
+        }
+      }
+    }
+  }
+  .home_footer {
+    @include FlexProp();
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.8rem;
+      padding: 12% 5%;
+
+      .icon {
+        &:hover {
+          transition: 0.3s;
+          color: grey;
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}
