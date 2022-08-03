@@ -18,8 +18,8 @@
   font-size: 1.2rem;
 }
 .home_content .home_header .home_buttons .register {
-  padding: 0.9rem;
-  width: 120px;
+  padding: 0.8rem;
+  width: 110px;
   border-radius: 8px;
   border: none;
   font-weight: 600;
@@ -35,8 +35,8 @@
   transition: 0.3s;
 }
 .home_content .home_header .home_buttons .login {
-  padding: 0.9rem;
-  width: 120px;
+  padding: 0.8rem;
+  width: 110px;
   border-radius: 8px;
   border: none;
   font-weight: 600;
@@ -64,6 +64,11 @@
   justify-content: space-between;
   gap: 3rem;
 }
+@media screen and (max-width: 768px) {
+  .home_content .home_body {
+    flex-direction: column;
+  }
+}
 .home_content .home_body .input_group {
   display: flex;
   flex-direction: column;
@@ -88,8 +93,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.9rem;
-  width: 120px;
+  padding: 0.8rem;
+  width: 110px;
   border-radius: 8px;
   border: none;
   font-weight: 600;
@@ -99,6 +104,11 @@
 .home_content .home_body .input_group .input_button button:hover {
   opacity: 0.8;
   transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .home_content .home_body .input_group .input_button button {
+    width: 100%;
+  }
 }
 .home_content .home_body .input_group .input_button .upload {
   background-color: rgb(244, 157, 17);

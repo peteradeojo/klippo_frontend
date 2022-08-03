@@ -4,8 +4,8 @@
 }
 
 @mixin buttonStyle {
-  padding: 0.9rem;
-  width: 120px;
+  padding: 0.8rem;
+  width: 110px;
   border-radius: 8px;
   border: none;
   font-weight: 600;
@@ -64,6 +64,10 @@
     @include FlexProp();
     gap: 3rem;
 
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
     .input_group {
       display: flex;
       flex-direction: column;
@@ -97,6 +101,9 @@
           &:hover {
             opacity: 0.8;
             transition: 0.3s;
+          }
+          @media screen and (max-width: 768px) {
+            width: 100%;
           }
         }
 
