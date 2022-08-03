@@ -5,18 +5,28 @@
 
 @mixin buttonStyle {
   padding: 0.9rem;
+  width: 120px;
   border-radius: 8px;
   border: none;
-  background-color: black;
-  color: #fff;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
+}
+@mixin outlineStyle {
+  @include buttonStyle();
+  border: 2px solid rgb(0, 145, 171);
+  color: rgb(27, 27, 27);
+
+  &:hover {
+    background-color: rgb(244, 157, 17);
+    color: #fff;
+    border: 2px solid rgb(244, 157, 17);
+    transition: 0.3s;
+  }
 }
 
 .home_content {
   padding: 4% 8%;
-
   @media only screen and (min-width: 1400px) {
     max-width: 1200px;
     margin: 0 auto;
@@ -31,8 +41,11 @@
       gap: 1rem;
       font-size: 1.2rem;
 
-      button {
-        @include buttonStyle();
+      .register {
+        @include outlineStyle();
+      }
+      .login {
+        @include outlineStyle();
       }
     }
   }
@@ -77,8 +90,23 @@
         button {
           display: flex;
           align-items: center;
+          justify-content: center;
           gap: 0.5rem;
           @include buttonStyle();
+
+          &:hover {
+            opacity: 0.8;
+            transition: 0.3s;
+          }
+        }
+
+        .upload {
+          background-color: rgb(244, 157, 17);
+          color: #fff;
+        }
+        .retrieve {
+          background-color: rgb(0, 145, 171);
+          color: #fff;
         }
       }
     }
@@ -95,7 +123,7 @@
       .icon {
         &:hover {
           transition: 0.3s;
-          color: grey;
+          color: rgb(0, 145, 171);
           transform: translateY(-5px);
         }
       }

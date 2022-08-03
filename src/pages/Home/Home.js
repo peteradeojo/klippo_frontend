@@ -10,8 +10,8 @@ function Home() {
         <div className="home_header">
           <h1>Klippo Online Clipboard</h1>
           <div className="home_buttons">
-            <button>Register</button>
-            <button>Login</button>
+            <button className="register">Register</button>
+            <button className="login">Login</button>
           </div>
         </div>
         <div className="info">
@@ -34,9 +34,9 @@ function Home() {
               Paste your text here
             </label>
             <textarea name="text" id="text" cols="30" rows="10" required></textarea>
-            <input type="file" name="file" id="file" className="upload" />
+            <input type="file" name="file" id="file" />
             <div className="input_button">
-              <button type="submit">
+              <button type="submit" className="upload">
                 Upload <MdIcons.MdUpload />
               </button>
             </div>
@@ -47,7 +47,7 @@ function Home() {
             </label>
             <textarea name="code" id="text" cols="30" rows="5" required></textarea>
             <div className="input_button">
-              <button type="submit">
+              <button type="submit" className="retrieve">
                 Retrieve <MdIcons.MdFileDownload />
               </button>
             </div>
